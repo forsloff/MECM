@@ -51,7 +51,7 @@ foreach( $deployment in $deployments.GetEnumerator() ) {
             [vSMS_SUMDeploymentStatistics].NumUnknown
         FROM
             [CM_LCF].[dbo].[vSMS_UpdatesAssignment]
-            LEFT JOIN [CM_LCFS].[dbo].[vSMS_SUMDeploymentStatistics] ON [vSMS_UpdatesAssignment].AssignmentID = [vSMS_SUMDeploymentStatistics].AssignmentID
+            LEFT JOIN [CM_LCF].[dbo].[vSMS_SUMDeploymentStatistics] ON [vSMS_UpdatesAssignment].AssignmentID = [vSMS_SUMDeploymentStatistics].AssignmentID
         WHERE
             [vSMS_UpdatesAssignment].CreationTime between '{0}'
             and '{1}'
